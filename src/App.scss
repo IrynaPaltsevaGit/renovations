@@ -1,0 +1,29 @@
+// @import './styles/partials/mixins';
+// @import './styles/partials/typography';
+// @import './styles/partials/variables';
+
+body {
+  font-family: Montserrat, sans-serif;
+  color: black;
+}
+
+*, 
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  
+
+//   @include tablet{
+//     padding: 0 2rem;
+// }
+
+//   @include desktop{
+//     padding: 0 4rem; 
+//   }
+}

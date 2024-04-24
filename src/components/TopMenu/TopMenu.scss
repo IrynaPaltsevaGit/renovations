@@ -1,0 +1,11 @@
+.menu{
+  display: flex; 
+  list-style-type: none;
+  font-size: 1.125rem;
+  font-weight: 700;
+ 
+
+  &_item{
+    margin-right: 2rem;
+  }
+  }
