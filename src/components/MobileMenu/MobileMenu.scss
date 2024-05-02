@@ -1,0 +1,33 @@
+@import '../../styles/partials/variables.scss';
+@import '../../styles/partials/mixins';
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 20% 2rem 0;
+    height: 100%;
+    width: 20rem;
+    overflow: auto;
+    @include shadow;
+
+    &__menu {
+        margin: 0;
+        padding: 0;
+        
+    }
+    &__item {
+        margin-bottom: 0.5rem;
+        list-style-type: none;
+
+    }
+    &__link {
+        padding: 0.625rem 0.5rem;
+        position: relative;
+        display: inline-flex;
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: $mainTextColor;
+    }
+    @include underline-after(".mobile-nav__link");
+}

@@ -1,11 +1,93 @@
-.menu{
-  display: flex; 
-  list-style-type: none;
-  font-size: 1.125rem;
-  font-weight: 700;
- 
+@import '../../styles/partials/variables.scss';
+@import '../../styles/partials/mixins';
+// @import './styles/partials/typography';
 
-  &_item{
-    margin-right: 2rem;
-  }
-  }
+
+.nav {
+	display: none;
+	
+	@include tablet-landscape {
+		max-width: 50%;
+		display: flex;
+		align-items: center;
+	}
+}
+.menu {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+  	display: flex; 
+	flex-wrap: wrap;
+	justify-content: center;
+    font-size: 1.125rem;
+    font-weight: 700;
+  
+    &__submenu {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		margin: 0;
+		padding: 0;
+		height: 0;
+		min-width: max-content;
+		overflow: hidden;
+		@include transition(all);
+
+		.menu__item {
+			border-bottom: 2px solid rgb(212, 212, 212);
+
+			&:last-child {
+				border: none;
+			}
+		}
+		.menu__link {
+			padding: 0.75rem 1rem;
+			background-color: rgb(250, 249, 249);
+		}
+    }
+
+  	&__item {
+		position: relative;
+		margin-right: 2rem;
+		list-style-type: none;
+
+		&:hover {
+			.menu__angle-down {
+				transform: rotate(180deg);
+			}
+
+			.menu__submenu {
+				height: auto;
+				@include transition(height);
+			}
+		}
+  	}
+	& > &__item > &__link {
+		&::after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 0px;
+			height: 2px;
+			background-color: $mainTextColor;
+			@include transition(width);
+		}
+		&:hover::after {
+			width: 100%;
+		}
+	}
+	&__link {
+		position: relative;
+		padding: 0.625rem 0;
+		display: inline-flex;
+		align-items: center;
+		color: $mainTextColor;
+		text-decoration: none;
+	}
+	&__angle-down {
+		margin-left: 0.625rem;
+		font-size: 0.875rem;
+		transition: transform 0.16s linear 0.05s;
+	}
+}

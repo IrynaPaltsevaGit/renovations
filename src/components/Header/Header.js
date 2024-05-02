@@ -10,13 +10,19 @@ export default function Header() {
             <img className='header__img' src={logo} alt="logo" />
         </a>
         <TopMenu/>
-        <div className='buttons'>
-            <div className='buttons__call'>
-              Call Us
-            </div>
-            <div className='buttons__quote'>Get a Free Quote</div>
+        <div className='header__links'>
+            <a href="#" className='header__link header__link--call'>
+                Call Us
+            </a>
+            <a href="#" className='header__link header__link--quote'>
+               Get a Free Quote
+            </a>
+        </div>
+        <div className='header__burger'>
+          <div className='header__burger-line'></div>
+          <div className='header__burger-line'></div>
+          <div className='header__burger-line'></div>
         </div>
     </div>
   )
 }
-{/* <script src="https://kit.fontawesome.com/33c302c09d.js" crossorigin="anonymous"></script> */}

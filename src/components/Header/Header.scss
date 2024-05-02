@@ -1,16 +1,80 @@
+@import "../../styles/partials/variables";
+@import "../../styles/partials/mixins";
+
 .header{
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: $maxContentWidth;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet-landscape {
+        padding: 0 2rem;
+    }
+
+    &__burger {
+        display: flex;
+        flex-direction: column;
+    }
+    &__burger-line {
+        margin-bottom: 0.4rem;
+        width: 2.25rem;
+        height: 3px;
+        background: $yellow;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
 
     &__img{
     width: 9rem;    
     }
-}
 
-.buttons{
-    font-size: 1rem;
-    
-    &__call{
-        border: 1px solid rgb(51, 51, 51);
-        
+    &__links {
+        display: none;
+
+        @include tablet-landscape {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    &__link {
+        margin-bottom: 0.25rem;
+        height: 3rem;
+        width: 12rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: 2px solid;
+        border-radius: 1.5rem;
+        text-decoration: none;
+        font-size: 1.25rem;
+        color: $mainTextColor;
+        font-weight: bold;
+        @include transition(all);
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &--call{
+            border-color: rgb(51, 51, 51);
+            &:hover {
+                background-color: $yellow;
+                border-color: $yellow;
+            }
+        }
+        &--quote {
+            background-color: $yellow;
+            border-color: $yellow;
+            &:hover {
+                background-color: white;
+            }
+        }
     }
 }
+

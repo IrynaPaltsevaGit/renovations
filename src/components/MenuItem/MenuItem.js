@@ -3,25 +3,34 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons';
 
 export default function MenuItem(props) {
-    let {children, href, subItems} = props;
+    let { children, href, subItems } = props;
 
     return (    
-        <li className='menu_item'>
-            <a href={href}>
-                {children}        
-                <FontAwesomeIcon icon={faAngleDown} />
-                <FontAwesomeIcon icon={faAngleUp} />
+        <li className='menu__item'>
+            <a href={href} className="menu__link">
+                {children} 
+                {
+                subItems 
+                ?
+                <>
+                    <FontAwesomeIcon icon={ faAngleDown } className="menu__angle menu__angle-down" />
+                    {/* <FontAwesomeIcon icon={ faAngleUp } className="menu__angle menu__angle-up" /> */}
+                </> 
+                : null
+                }       
+                
             </a>
             {
                 subItems 
                 ?
-                <ul>
+                <ul className="menu__submenu">
                     {
-                    subItems.map((subItem, index)=>{
+                    subItems.map((subItem, index) => {
                         return (
-                            <li key={`subItem-${index}`} href={subItem.href}>
+                            <MenuItem key={`subItem-${index}`} className="menu__item"
+                                href={subItem.href} subItems={subItem.subItems}>
                                 {subItem.text}
-                            </li>
+                            </MenuItem>
                         )
                     })
                     }

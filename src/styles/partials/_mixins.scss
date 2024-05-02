@@ -1,0 +1,49 @@
+@import "./variables";
+
+
+@mixin mobile {
+    @media screen and (max-width: $mobile-breakpoint) {
+        @content;
+    }
+  }
+  
+@mixin tablet {
+    @media screen and (min-width: $tablet-breakpoint) {
+        @content;
+    }
+}
+@mixin tablet-landscape {
+    @media screen and (min-width: $tablet-landscape-breakpoint) {
+        @content; 
+    }
+}
+  
+@mixin desktop {
+    @media screen and (min-width: $desktop-breakpoint) {
+        @content;
+    }
+}
+
+@mixin transition($prop) {
+    transition: $prop 0.2s linear;
+}
+
+@mixin underline-after($tag) {
+    #{$tag}::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0px;
+        height: 2px;
+        background-color: $mainTextColor;
+        @include transition(width);
+    }
+    #{$tag}:hover::after {
+        width: 100%;
+    }
+}
+
+@mixin shadow {
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.55);
+}
