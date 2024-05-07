@@ -1,0 +1,12 @@
+.hero {
+    &__form {
+        padding: 1.5625rem 2rem;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 1.25rem;
+    }
+    &__form-title {
+        font-size: 1.875rem;
+        color: white;
+        text-align: center;
+    }
+}

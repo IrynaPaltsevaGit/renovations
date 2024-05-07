@@ -3,7 +3,8 @@ import './Header.scss';
 import TopMenu from '../TopMenu/TopMenu';
 import logo from '../../assets/images/logo/logo.jpg';
 
-export default function Header() {
+export default function Header({ showMenu, setShowMenu }) {
+  
   return (
     <div className='header'>
         <a className="header__logo" href="/" >
@@ -18,7 +19,7 @@ export default function Header() {
                Get a Free Quote
             </a>
         </div>
-        <div className='header__burger'>
+        <div className={`header__burger ${showMenu ? "active" : ""}`} onClick={setShowMenu}>
           <div className='header__burger-line'></div>
           <div className='header__burger-line'></div>
           <div className='header__burger-line'></div>
