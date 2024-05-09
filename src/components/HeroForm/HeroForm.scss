@@ -1,3 +1,6 @@
+@import "../../styles/partials/variables.scss";
+@import "../../styles/partials/mixins.scss";
+
 .hero {
     &__form {
         padding: 1.5625rem 2rem;
@@ -5,8 +8,44 @@
         border-radius: 1.25rem;
     }
     &__form-title {
+        margin: 0 0 1rem;
         font-size: 1.875rem;
         color: white;
         text-align: center;
+    }
+    &__label {
+        margin-bottom: 1rem;
+        @include column;
+
+        @include tablet {
+            max-width: 48%;
+        }
+    }
+    &__label-text {
+        margin-bottom: 0.25rem;
+        color: white;
+    }
+    &__input {
+        margin: 0;
+        height: 2.5rem;
+        background-color: transparent;
+        border: solid 1px white;
+    }
+    &__submit {
+        margin: 0 auto;
+        width: 15.625rem;
+        height: 3rem;
+        display: block;
+        border-radius: 50rem;
+        background-color: $yellow;
+        font-size: 1rem;
+        font-weight: bold;
+        border: solid 1px $yellow;
+        box-shadow: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: white;
+        }
     }
 }

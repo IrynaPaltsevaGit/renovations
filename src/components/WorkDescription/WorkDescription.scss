@@ -1,0 +1,41 @@
+@import "../../styles/partials/variables.scss";
+@import "../../styles/partials/mixins.scss";
+
+.description {
+    &__img-wrap {
+        position: relative;
+        margin-bottom: 2rem;
+        padding-bottom: 40%;
+        width: 100%;
+        height: 0;
+        box-sizing: content-box;
+        overflow: hidden;
+    }
+    &__img {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        transform: translate(0, -50%);
+    }
+    &__title {
+        font-size: 1.875rem;
+        font-weight: bold;
+        color: $mainTextColor;
+        text-align: center;
+    }
+    &__subhead {
+        font-size: 0.875rem;
+        font-weight: 300;
+        color: $mainTextColor;
+        text-align: center;
+    }
+    &__text {
+        @include text;
+
+    }
+    &__link {
+        margin: 0 0.25rem;
+        @include text;
+    }
+}

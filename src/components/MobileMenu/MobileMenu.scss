@@ -5,7 +5,7 @@
     position: fixed;
     top: 0;
     right: -20rem;
-    padding: calc(5vh + 5rem) 2rem 2rem;
+    padding: 5rem 2rem 2rem;
     height: 100vh;
     width: 20rem;
     overflow: auto;
@@ -13,6 +13,10 @@
     transition: right 0.3s linear;
     background-color: white;
     z-index: 3;
+
+    @include tablet-landscape {
+        display: none;
+    }
 
     &.active {
         right: 0;

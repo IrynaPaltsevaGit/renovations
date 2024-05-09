@@ -3,6 +3,7 @@ import { useState } from "react";
 import Header from './components/Header/Header';
 import MobileMenu from './components/MobileMenu/MobileMenu';
 import Hero from './components/Hero/Hero';
+import WorkDescription from './components/WorkDescription/WorkDescription';
 
 function App() {
 	const [showMenu, setShowMenu] = useState(false);
@@ -17,6 +18,7 @@ function App() {
 			<main className='main'>
 				<MobileMenu showMenu={showMenu} />
 				<Hero />
+				<WorkDescription />
 			</main>
 
 

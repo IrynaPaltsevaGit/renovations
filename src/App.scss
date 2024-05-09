@@ -42,4 +42,8 @@ section {
     display: block;
     opacity: 0.25;
   }
+
+  @include tablet-landscape {
+    display: none;
+  }
 }

@@ -51,4 +51,10 @@
 @mixin text {
     font-size: 0.875rem;
     line-height: 1.5;
+    color: $mainTextColor;
+}
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
 }

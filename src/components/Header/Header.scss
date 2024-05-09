@@ -22,6 +22,10 @@
         flex-direction: column;
         cursor: pointer;
 
+        @include tablet-landscape {
+            display: none;
+        }
+
         &.active {
             .header__burger-line {
                 background-color: $mainTextColor;
@@ -68,7 +72,7 @@
     }
 
     &__img{
-    width: 9rem;    
+        max-width: 5rem;    
     }
 
     &__links {

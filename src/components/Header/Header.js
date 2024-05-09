@@ -6,7 +6,7 @@ import logo from '../../assets/images/logo/logo.jpg';
 export default function Header({ showMenu, setShowMenu }) {
   
   return (
-    <div className='header'>
+    <header className='header'>
         <a className="header__logo" href="/" >
             <img className='header__img' src={logo} alt="logo" />
         </a>
@@ -24,6 +24,6 @@ export default function Header({ showMenu, setShowMenu }) {
           <div className='header__burger-line'></div>
           <div className='header__burger-line'></div>
         </div>
-    </div>
+    </header>
   )
 }
