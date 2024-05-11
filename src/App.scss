@@ -22,10 +22,10 @@ section {
   margin: 0 auto;
   max-width: $maxContentWidth;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
 
   @include tablet-landscape {
-    padding: 2rem;
+    padding: 2rem 2.5rem;
   }
 }
 .overlay {

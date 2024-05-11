@@ -48,13 +48,49 @@
     box-shadow: 2px 2px 10px rgba(0,0,0,0.55);
 }
 
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin button {
+    width: 15.625rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50rem;
+    background-color: $yellow;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: $mainTextColor;
+    border: solid 1px $yellow;
+    box-shadow: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: white;
+    }
+}
+
+@mixin title {
+    margin: 1rem 0;
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: $mainTextColor;
+    text-align: center;
+}
+
+@mixin subhead {
+    font-size: 0.875rem;
+    font-weight: 300;
+    color: $mainTextColor;
+    text-align: center;
+}
+
 @mixin text {
     font-size: 0.875rem;
     line-height: 1.5;
     color: $mainTextColor;
-}
-
-@mixin column {
-    display: flex;
-    flex-direction: column;
 }

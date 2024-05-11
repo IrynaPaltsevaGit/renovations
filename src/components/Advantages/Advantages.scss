@@ -1,0 +1,44 @@
+@import "../../styles/partials/variables.scss";
+@import "../../styles/partials/mixins.scss";
+
+.advantages {
+    padding: 1rem 2.5rem;
+    &__title {
+        @include title
+    }
+    &__subhead {
+        @include subhead;
+    }
+    &__columns {
+        padding-top: 2rem;
+    }
+    &__col {
+        padding-bottom: 2rem;
+    }
+    &__col-title {
+        @include title;
+        font-size: 1.5rem;
+        
+        @include tablet-landscape {
+            text-align: start;
+        }
+    }
+    &__col-text {
+        @include text;
+    }
+    &__about-us {
+        margin: 0 auto;
+        @include button;
+    }
+    &__icon-wrap {
+        margin: 0 auto;
+        padding: 0.75rem;
+        width: min-content;
+        background-color: $iconBg;
+        border-radius: 0.25rem;
+    }
+    &__icon {
+        font-size: 3.5rem;
+        color: $yellow;
+    }
+}

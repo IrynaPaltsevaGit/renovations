@@ -42,6 +42,9 @@ export default function WorkDescription() {
                     <a href="#" className='description__link'>Explore our portfolio</a> 
                     and discover how we make every project a lasting masterpiece.
                 </p>
+                <a href="#" className='description__contact-link'>
+                    Get A Free Quote
+                </a>
             </div>
         </div>
     </section>

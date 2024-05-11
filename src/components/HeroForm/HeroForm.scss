@@ -33,19 +33,6 @@
     }
     &__submit {
         margin: 0 auto;
-        width: 15.625rem;
-        height: 3rem;
-        display: block;
-        border-radius: 50rem;
-        background-color: $yellow;
-        font-size: 1rem;
-        font-weight: bold;
-        border: solid 1px $yellow;
-        box-shadow: none;
-        cursor: pointer;
-
-        &:hover {
-            background-color: white;
-        }
+        @include button;
     }
 }

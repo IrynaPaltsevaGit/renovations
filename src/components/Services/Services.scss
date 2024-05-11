@@ -1,0 +1,20 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.services {
+    background-color: rgb(131, 109, 52);
+
+    &__title {
+        @include title;
+        color: white;
+    }
+    &__subhead {
+        @include subhead;
+        color: white
+    }
+    &__tiles {
+        padding: 2rem 0 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

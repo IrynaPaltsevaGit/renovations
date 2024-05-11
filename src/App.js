@@ -4,6 +4,8 @@ import Header from './components/Header/Header';
 import MobileMenu from './components/MobileMenu/MobileMenu';
 import Hero from './components/Hero/Hero';
 import WorkDescription from './components/WorkDescription/WorkDescription';
+import Advantages from './components/Advantages/Advantages';
+import Services from './components/Services/Services';
 
 function App() {
 	const [showMenu, setShowMenu] = useState(false);
@@ -19,6 +21,8 @@ function App() {
 				<MobileMenu showMenu={showMenu} />
 				<Hero />
 				<WorkDescription />
+				<Advantages />
+				<Services />
 			</main>
 
 
