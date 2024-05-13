@@ -20,9 +20,9 @@ export default function Header({ showMenu, setShowMenu }) {
             </a>
         </div>
         <div className={`header__burger ${showMenu ? "active" : ""}`} onClick={setShowMenu}>
-          <div className='header__burger-line'></div>
-          <div className='header__burger-line'></div>
-          <div className='header__burger-line'></div>
+			<div className='header__burger-line'></div>
+			<div className='header__burger-line'></div>
+			<div className='header__burger-line'></div>
         </div>
     </header>
   )

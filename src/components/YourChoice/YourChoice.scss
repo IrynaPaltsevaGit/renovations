@@ -1,0 +1,18 @@
+@import "../../styles/partials/mixins";
+@import "../../styles/partials/variables";
+
+.choice {
+    &__title {
+        @include title;
+    }
+    &__subhead {
+        @include subhead;
+    }
+    &__text {
+        @include text;
+    }
+    &__link {
+        @include button;
+        margin: 2rem auto 0;
+    }
+}
