@@ -1,10 +1,10 @@
 @import './styles/partials/mixins';
-// @import './styles/partials/typography';
-// @import './styles/partials/variables';
+@import './styles/partials/typography';
+@import './styles/partials/variables';
 
 body {
   font-family: Montserrat, sans-serif;
-  color: black;
+  color: $mainTextColor;
 }
 
 *, 
