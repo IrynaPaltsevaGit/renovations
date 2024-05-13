@@ -2,7 +2,7 @@ import React from 'react';
 import Divider from "../Divider/Divider";
 import "./Advantages.scss";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMedal, faPaintRoller } from '@fortawesome/free-solid-svg-icons';
+import { faMedal, faPaintRoller, faBrush } from '@fortawesome/free-solid-svg-icons';
 
 export default function Advantages() {
 	const dividerStyles = {marginBottom: "3rem"};
@@ -50,7 +50,7 @@ export default function Advantages() {
 				</div>
 				<div className='advantages__col'>
 					<div className='advantages__icon-wrap'>
-						<FontAwesomeIcon icon={faMedal} className='advantages__icon' />
+						<FontAwesomeIcon icon={faBrush} className='advantages__icon' />
 					</div>
 					<h3 className='advantages__col-title'>
 						FACTORY FINISH RESULT
