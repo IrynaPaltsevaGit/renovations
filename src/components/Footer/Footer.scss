@@ -1,0 +1,56 @@
+@import '../../styles/partials/variables.scss';
+@import '../../styles/partials/mixins';
+
+.footer {
+    background: rgb(100, 100 ,100);
+    background: linear-gradient(rgba(100, 100 ,100 ,1) 0%, rgba(169,169,169,1) 40%, rgba(255,255,255,1) 100%);
+    &__columns {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    &__col {
+        text-align: center;
+        @include tablet {
+            width: 27%;
+
+            &:first-child {
+                width: 19%;
+            }
+        }
+    }
+    &__logo {
+        max-width: 9.375rem;
+    }
+    &__title {
+        margin: 0 0 0.75rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    &__subhead {
+        margin: 0 0 0.5rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    &__link {
+        @include text;
+    }
+    &__page-link {
+        @include text;
+        position: relative;
+        color: $mainTextColor;
+        font-size: 1.25rem;
+        text-decoration: none;
+    }
+    &__text {
+        @include text;
+        margin: 0 0 0.625rem;
+    }
+    @include underline-after(".footer__page-link");
+}

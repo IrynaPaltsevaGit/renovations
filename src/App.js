@@ -8,6 +8,7 @@ import Advantages from './components/Advantages/Advantages';
 import Services from './components/Services/Services';
 import YourChoice from './components/YourChoice/YourChoice';
 import Testimonials from './components/Testimonials/Testimonials';
+import Footer from './components/Footer/Footer';
 
 function App() {
 	const [showMenu, setShowMenu] = useState(false);
@@ -27,6 +28,7 @@ function App() {
 				<Services />
 				<YourChoice />
 				<Testimonials />
+				<Footer />
 			</main>
 
 

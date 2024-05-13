@@ -18,7 +18,8 @@ body {
   display: flex;
   flex-direction: column;
 }
-section {
+section,
+.footer {
   margin: 0 auto;
   max-width: $maxContentWidth;
   width: 100%;
@@ -46,4 +47,8 @@ section {
   @include tablet-landscape {
     display: none;
   }
+}
+
+img {
+  max-width: 100%;
 }
