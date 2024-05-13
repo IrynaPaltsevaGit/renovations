@@ -1,0 +1,53 @@
+@import '../../styles/partials/variables.scss';
+@import '../../styles/partials/mixins';
+
+
+.testimonial {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid $mainTextColor;
+
+    &:last-child {
+        border: none;
+    }
+
+    &__date {
+        margin: 0 0 0.875rem;
+        width: 100%;
+        @include text;
+        opacity: 0.85;
+        font-size: 0.875rem;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name {
+        margin: 0 0 0.5rem;
+        @include text;
+        font-weight: 600;
+    }
+    &__header {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+    &__rate {
+        margin-bottom: 0.5rem;
+    }
+    &__star {
+        margin-right: 2px;
+        color: $yellow;
+        font-size: 1.125rem;
+        @include tablet {
+            font-size: 1.375rem;
+        }
+    }
+    &__text {
+        margin: 0;
+        @include text;
+    }
+}
