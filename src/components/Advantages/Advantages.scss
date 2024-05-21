@@ -3,17 +3,53 @@
 
 .advantages {
     padding: 1rem 2.5rem;
+
+    &__header {
+        @include tablet-landscape {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
     &__title {
-        @include title
+        @include title;
+
+        @include tablet-landscape {
+            width: 40%;
+            font-size: 1.625rem;
+            text-align: left;
+        }
+    }
+    & &__divider {
+        @include tablet-landscape {
+            width: 60%;
+            margin: 0;
+        }
     }
     &__subhead {
         @include subhead;
+
+        @include tablet-landscape {
+            margin-bottom: 0;
+            text-align: left;
+        }
     }
     &__columns {
         padding-top: 2rem;
+
+        @include tablet-landscape {
+            display: flex;
+            justify-content: space-between;
+        }
     }
     &__col {
         padding-bottom: 2rem;
+        
+        @include tablet-landscape {
+            padding: 0 1rem;
+            width: 33.333%;
+        }
     }
     &__col-title {
         @include title;
@@ -21,6 +57,11 @@
         
         @include tablet-landscape {
             text-align: start;
+        }
+    }
+    &__col-divider {
+        @include tablet-landscape {
+            margin-top: auto;
         }
     }
     &__col-text {
@@ -34,11 +75,25 @@
         margin: 0 auto;
         padding: 0.75rem;
         width: min-content;
+        min-width: 4.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background-color: $iconBg;
         border-radius: 0.25rem;
+        
+        @include tablet-landscape {
+            margin: 0;
+            padding: 0.625rem;
+        }
     }
     &__icon {
+
         font-size: 3.5rem;
         color: $yellow;
+
+        @include tablet-landscape {
+            font-size: 3rem;
+        }
     }
 }

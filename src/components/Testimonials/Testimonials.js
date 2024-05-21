@@ -1,8 +1,9 @@
 import React from 'react'
 import Testimonial from '../Testimonial/Testimonial';
 import "./Testimonials.scss";
+import Section from '../Section/Section';
 
-export default function Testimonials() {
+export default function Testimonials({scrollTop}) {
     const testimonials = [
         {
             "username": "Iryna Paltseva",
@@ -21,7 +22,7 @@ export default function Testimonials() {
         },
     ];
   return (
-    <section className='testimonials'>
+    <Section classes="testimonials" scrollTop={scrollTop}>
         <h2 className='testimonials__title'>
             Testimonials
         </h2>
@@ -40,6 +41,6 @@ export default function Testimonials() {
         <a className='testimonials__link' href="#">
             Leave us a review
         </a>
-    </section>
+    </Section>
   )
 }

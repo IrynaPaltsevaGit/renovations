@@ -98,3 +98,15 @@
         font-size: 1rem;
     }
 }
+
+@mixin columns {
+    @include tablet-landscape {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+@mixin column-one-second {
+    @include tablet-landscape {
+        width: 48%;
+    }
+}

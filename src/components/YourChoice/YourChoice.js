@@ -1,13 +1,14 @@
 import React from 'react';
 import painting from "../../assets/images/painting.webp";
 import "./YourChoice.scss";
+import Section from '../Section/Section';
 
-export default function YourChoice() {
+export default function YourChoice({scrollTop}) {
   return (
-    <section className='choice'>
-		<div className='choice-columns'>
+    <Section classes="choice" scrollTop={scrollTop}>
+		<div className='choice__columns'>
 			<div className='choice__col'>
-				<img src={painting} />
+				<img className='choice__img' src={painting} />
 			</div>
 			<div className='choice__col'>
 				<h3 className='choice__subhead'>
@@ -32,6 +33,6 @@ export default function YourChoice() {
 				</a>
 			</div>
 		</div>
-    </section>
+    </Section>
   )
 }

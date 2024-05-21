@@ -1,9 +1,11 @@
 import React from 'react';
 import "./WorkDescription.scss";
+import Section from "../Section/Section";
 
-export default function WorkDescription() {
+export default function WorkDescription({scrollTop}) {
+    
   return (
-    <section className='description'>
+    <Section classes="description" scrollTop={scrollTop}>
         <div className='description__columns'>
             <div className='description__col'>
                 <div className='description__img-wrap'>
@@ -47,7 +49,7 @@ export default function WorkDescription() {
                 </a>
             </div>
         </div>
-    </section>
+    </Section>
   )
 }
 

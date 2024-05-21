@@ -2,8 +2,9 @@ import React from 'react'
 import ServiceTile from '../ServiceTile/ServiceTile';
 import Divider from "../Divider/Divider";
 import "./Services.scss";
+import Section from '../Section/Section';
 
-export default function Services() {
+export default function Services({scrollTop}) {
     const tiles = [
         {
             title: "INTERIOR RESIDENTIAL PAINTING",
@@ -26,7 +27,7 @@ export default function Services() {
         },
     ];
     return (
-        <section className='services'>
+        <Section classes="services" scrollTop={scrollTop}>
             <h3 className='services__subhead'>
                 ELEVATING INTERIORS, BEAUTIFYING EXTERIORS, AND BEYOND
             </h3>
@@ -46,7 +47,7 @@ export default function Services() {
                     })
                 }
             </div>
-        </section>
+        </Section>
     )
 }
 

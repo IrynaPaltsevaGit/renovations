@@ -3,14 +3,14 @@
 
 .header{
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 1rem;
     max-width: $maxContentWidth;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     @include tablet-landscape {
-        padding: 0 2rem;
+        padding: 1rem 2rem;
     }
 
     &__burger {
@@ -85,19 +85,15 @@
         }
     }
     &__link {
-        margin-bottom: 0.25rem;
-        height: 3rem;
+        @include button;
+        margin-bottom: 0.5rem;
+        padding: 0 0.5rem;
+        box-sizing: content-box;
         width: 12rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
         border: 2px solid;
-        border-radius: 1.5rem;
+        background-color: white;
         text-decoration: none;
         font-size: 1.25rem;
-        color: $mainTextColor;
-        font-weight: bold;
         @include transition(all);
 
         &:last-child {

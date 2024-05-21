@@ -2,6 +2,13 @@
 @import "../../styles/partials/variables";
 
 .choice {
+    &__columns {
+        @include columns;
+        flex-direction: row-reverse;
+    }
+    &__col {
+        @include column-one-second;
+    }
     &__title {
         @include title;
     }
@@ -14,5 +21,10 @@
     &__link {
         @include button;
         margin: 2rem auto 0;
+    }
+    &__img {
+        @include tablet-landscape {
+            object-fit: cover;
+        }
     }
 }
