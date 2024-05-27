@@ -4,6 +4,10 @@
         text: 'About us'
     },
     {
+        href: '/gallery',
+        text: "Gallery"
+    },
+    {
         href: '#', 
         text: 'Services',
         subItems: [

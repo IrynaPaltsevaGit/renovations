@@ -1,14 +1,12 @@
 import './App.scss';
 import { useEffect, useState } from "react";
 import Header from './components/Header/Header';
-import MobileMenu from './components/MobileMenu/MobileMenu';
-import Hero from './components/Hero/Hero';
-import WorkDescription from './components/WorkDescription/WorkDescription';
-import Advantages from './components/Advantages/Advantages';
-import Services from './components/Services/Services';
-import YourChoice from './components/YourChoice/YourChoice';
-import Testimonials from './components/Testimonials/Testimonials';
 import Footer from './components/Footer/Footer';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import MobileMenu from './components/MobileMenu/MobileMenu';
+import Homepage from './pages/Homepage/HomePage';
+import Gallery from './pages/Gallery/Gallery';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
 	const [showMenu, setShowMenu] = useState(false);
@@ -36,17 +34,19 @@ function App() {
 				setShowOverlay(!showMenu);
 			}} 
 			 showMenu={showMenu}/>
+			 <MobileMenu showMenu={showMenu} />
 			<main className='main'>
-				<MobileMenu showMenu={showMenu} />
-				<Hero />
-				<WorkDescription scrollTop={scrollTop} />
-				<Advantages scrollTop={scrollTop}  />
-				<Services scrollTop={scrollTop}  />
-				<YourChoice scrollTop={scrollTop}  />
-				<Testimonials scrollTop={scrollTop}  />
-				<Footer />
+				
+				<BrowserRouter>
+					<Routes>
+						<Route path="/" element={<Homepage scrollTop={scrollTop} />} />
+						<Route path="/gallery" element={<Gallery scrollTop={scrollTop} />} />
+						<Route path="*" element={<NotFound />} />
+					</Routes>
+				</BrowserRouter>
+				
 			</main>
-
+			<Footer />
 
 			<div className={`overlay ${showOverlay ? "active" : ""}`} 
 				onClick={() => {

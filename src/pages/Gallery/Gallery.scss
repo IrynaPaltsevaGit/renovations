@@ -1,0 +1,28 @@
+@import '../../styles/partials/variables.scss';
+@import '../../styles/partials/mixins';
+
+.gallery {
+    background-color: #f3f3f3;
+    &__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+
+        @include tablet {
+            margin: 0 1% 1rem;
+            width: 48%;
+        }
+
+        @include tablet-landscape {
+            width: 23%;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+}
