@@ -10,6 +10,7 @@ export default function Hero() {
 			setIsHeroVisible(true);
 		}, 1);
 	}, []);
+
 	return (
 		<section className='hero'>
 			<div className={`hero__columns ${isHeroVisible ? "active" : ""}`}>

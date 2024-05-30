@@ -36,8 +36,13 @@
     &__input {
         margin: 0;
         height: 2.5rem;
+        min-height: 2.5rem;
+        max-width: 100%;
         background-color: transparent;
         border: solid 1px white;
+        color: white;
+        font-size: 1rem;
+        font-weight: 500;
     }
     &__submit {
         margin: 0 auto;
