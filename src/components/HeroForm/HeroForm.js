@@ -7,7 +7,7 @@ export default function HeroForm() {
     const [lastName, setLastName] = useState("");
     const [phone, setPhone] = useState("");
     const [email, setEmail] = useState("");
-    const [note, setNote] = useState("");
+    const [message, setMessage] = useState("");
 
     function handleClick() {
 		const publicKey = "xZv-9_iBFdzq2EF4X";
@@ -18,6 +18,7 @@ export default function HeroForm() {
 		console.log(result)
 		
 	}
+
 	function sendEmail(e) {
         e.preventDefault();
 		const publicKey = "xZv-9_iBFdzq2EF4X";
@@ -27,8 +28,7 @@ export default function HeroForm() {
 		let templateParams = {
 			to_name: "Iryna",
 			from_name: "Oleksandr",
-			message: "Some message",
-            note,
+            message,
             email,
             first_name: firstName,
             last_name: lastName,
@@ -77,17 +77,20 @@ export default function HeroForm() {
                 </span>
                 <input className='hero__input' name='email' value={email} onChange={(event) => setEmail(event.target.value)} />
             </label>
-            <label className="hero__label">
+            <label className="hero__label hero__label--full">
                 <span className='hero__label-text'>
-                    Note:
+                    Message:
                 </span>
-                <textarea className='hero__input' 
-                    value={note} name='note' 
-                    onChange={(event) => setNote(event.target.value)} />
+                <textarea className='hero__input hero__textarea' 
+                    value={message} name='message' 
+                    onChange={(event) => setMessage(event.target.value)} />
             </label>
-            <button className="hero__submit" type="submit">
-                Send Message
-            </button>
+            <div className="hero__submit-wrap">
+                <button className="hero__submit" type="submit">
+                    Send Message
+                </button>
+            </div>
+            
         </form>
     )
 }
