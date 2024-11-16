@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Footer.scss";
+import ContactInfo from "../ContactInfo/ContactInfo.js";
 import logo from '../../assets/images/logo/logo.jpg';
 
 export default function Footer() {
@@ -12,31 +13,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className='footer__col'>
-                <h2 className='footer__title'>
-                    Contact Us
-                </h2>
-                <h4 className="footer__subhead">
-                    Email
-                </h4>
-                <p className='footer__text'>
-                    <a className="footer__link" href="mailto:alex@gmail.com">
-                        alex@gmail.com
-                    </a> 
-                </p>
-                <h4 className="footer__subhead">
-                    Phone
-                </h4>
-                <p className='footer__text'>
-                    <a className='footer__link' href="tel:333-333-33-33">
-                        333-333-33-33
-                    </a>  
-                </p>
-                <h4 className="footer__subhead">
-                    Business Hours
-                </h4>
-                <p className='footer__text'>
-                    Mon-Fri 09.00 am - 05.00 pm
-                </p>
+                <ContactInfo />
             </div>
             <div className='footer__col'>
                 <h2 className='footer__title'>

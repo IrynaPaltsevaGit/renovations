@@ -27,6 +27,17 @@
     &__logo {
         max-width: 9.375rem;
     }
+    
+    &__link {
+        @include text;
+    }
+    &__page-link {
+        @include text;
+        position: relative;
+        color: $mainTextColor;
+        font-size: 1.25rem;
+        text-decoration: none;
+    }
     &__title {
         margin: 0 0 0.75rem;
         font-size: 1.5rem;
@@ -39,19 +50,10 @@
         font-weight: 600;
         text-transform: uppercase;
     }
-    &__link {
-        @include text;
-    }
-    &__page-link {
-        @include text;
-        position: relative;
-        color: $mainTextColor;
-        font-size: 1.25rem;
-        text-decoration: none;
-    }
     &__text {
         @include text;
         margin: 0 0 0.625rem;
     }
+    
     @include underline-after(".footer__page-link");
 }

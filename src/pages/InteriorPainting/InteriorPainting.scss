@@ -1,0 +1,16 @@
+@import '../../styles/partials/variables.scss';
+@import '../../styles/partials/mixins';
+
+.hero {
+    &__subhead {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: white;
+
+        &--secondary {
+            font-size: 1.125rem;
+            font-weight: normal;
+            color: $yellow;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Header.scss';
 import TopMenu from '../TopMenu/TopMenu';
-import logo from '../../assets/images/logo/logo.jpg';
+import logo from '../../assets/images/logo/logo.png';
 
 export default function Header({ showMenu, setShowMenu }) {
   
@@ -12,10 +12,10 @@ export default function Header({ showMenu, setShowMenu }) {
         </a>
         <TopMenu/>
         <div className='header__links'>
-            <a href="#" className='header__link header__link--call'>
+            <a href="tel:4444444444" className='header__link header__link--call'>
                 Call Us
             </a>
-            <a href="#" className='header__link header__link--quote'>
+        <a style={{ "display": "none" }} href="#" className='header__link header__link--quote'>
                Get a Free Quote
             </a>
         </div>

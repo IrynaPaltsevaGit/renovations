@@ -7,6 +7,9 @@ import MobileMenu from './components/MobileMenu/MobileMenu';
 import Homepage from './pages/Homepage/HomePage';
 import Gallery from './pages/Gallery/Gallery';
 import NotFound from './pages/NotFound/NotFound';
+import ContactUs from './pages/ContactUs/ContactUs';
+import InteriorPainting from './pages/InteriorPainting/InteriorPainting';
+import ExteriorPainting from './pages/ExteriorPainting/ExteriorPainting';
 
 function App() {
 	const [showMenu, setShowMenu] = useState(false);
@@ -19,7 +22,7 @@ function App() {
 		// Cleanup event listener on component unmount
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
-		  };
+		};
 	},[]);
 
 	function handleScroll(event) {
@@ -41,6 +44,9 @@ function App() {
 					<Routes>
 						<Route path="/" element={<Homepage scrollTop={scrollTop} />} />
 						<Route path="/gallery" element={<Gallery scrollTop={scrollTop} />} />
+						<Route path="/interior-painting" element={<InteriorPainting scrollTop={scrollTop} />} />
+						<Route path="/exterior-painting" element={<ExteriorPainting scrollTop={scrollTop} />} />
+						<Route path="/contact-us" element={<ContactUs scrollTop={scrollTop} />} />
 						<Route path="*" element={<NotFound />} />
 					</Routes>
 				</BrowserRouter>

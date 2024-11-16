@@ -12,11 +12,11 @@
         text: 'Services',
         subItems: [
             {
-                href: '#', 
+                href: '/interior-painting', 
                 text: 'Interior Painting',
             },
             {
-                href: '#', 
+                href: '/exterior-painting', 
                 text: 'Exterior Painting',
             },
         ]
@@ -26,7 +26,7 @@
         text: 'Resources'
     },
     {
-        href: '#', 
+        href: '/contact-us', 
         text: 'Contact'
     },
 ];

@@ -1,0 +1,25 @@
+@import '../../styles/partials/variables.scss';
+@import '../../styles/partials/mixins';
+
+.contact-info {
+    &__title {
+        margin: 0 0 0.75rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    &__subhead {
+        margin: 0 0 0.5rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    &__text {
+        @include text;
+        margin: 0 0 0.625rem;
+    }
+    &__link {
+        @include text;
+        color: $mainTextColor;
+    }
+}

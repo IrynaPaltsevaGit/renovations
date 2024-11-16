@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./Hero.scss";
 import Divider from "../Divider/Divider";
-import HeroForm from '../HeroForm/HeroForm';
+import ContactForm from '../ContactForm/ContactForm';
 
 export default function Hero() {
 	const [isHeroVisible, setIsHeroVisible] = useState(false);
@@ -31,7 +31,7 @@ export default function Hero() {
 					</p>
 				</div>
 				<div className='hero__col'>
-					<HeroForm />
+					<ContactForm />
 				</div>
 			</div>
 		</section>

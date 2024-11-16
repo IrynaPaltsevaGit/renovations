@@ -1,6 +1,7 @@
 @import "../../styles/partials/variables.scss";
 @import "../../styles/partials/mixins.scss";
 
+$lightRed: rgb(255, 150, 150);
 .hero {
     &__form {
         padding: 1.5625rem 2rem;
@@ -22,7 +23,6 @@
         text-align: center;
     }
     &__label {
-        margin-bottom: 1rem;
         @include column;
 
         @include desktop {
@@ -45,19 +45,68 @@
         background-color: transparent;
         border: solid 1px white;
         color: white;
-        font-size: 1rem;
-        font-weight: 500;
+        font-size: 1.1rem;
+        font-weight: 300;
     }
     &__textarea {
+        margin-bottom: 1rem;
         min-height: 4rem;
         min-width: 100%;
         max-width: 100%;
     }
     &__submit-wrap {
         width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    &__input-error {
+        @include text;
+        margin-top: 0.25rem;
+        margin-bottom: 0.75rem;
+        font-weight: normal;
+        font-size: 1rem;
+        color: $lightRed;
     }
     &__submit {
-        margin: 0 auto;
+        margin: 0 0 0 calc((100% - 15.625rem - 30px) / 2);
         @include button;
+    }
+    &__submit-message {
+        @include text;
+        margin-bottom: 1rem;
+        padding: 0.875rem 1.5rem;
+        font-weight: bold;
+        border-radius: 5px;
+
+        &--info {
+            background-color: lightgreen;
+            color: green;
+        }
+        &--error {
+            background-color: rgb(255, 150, 150);
+            color: darkred;
+        }
+    }
+}
+
+.loader {
+    margin-left: auto;
+    width: 24px;
+    height: 24px;
+    border: 3px solid #FFF;
+    border-bottom-color: $yellow;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
